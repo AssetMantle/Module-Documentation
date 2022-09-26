@@ -51,5 +51,26 @@ sleep $SLEEP
 ```
 - Step 6
 
-Now 
+Now after loading the coins, sending coins to users could be done by
+```
+assetClient tx send $ACCOUNT_1 $ACCOUNT_3 110stake -y $KEYRING $MODE
+sleep $SLEEP
+assetClient tx send $ACCOUNT_3 $ACCOUNT_4 10stake -y $KEYRING $MODE
+assetClient tx send $ACCOUNT_1 $ACCOUNT_2 100stake -y $KEYRING $MODE
+sleep $SLEEP
+```
+
+- Step 7
+
+Now recursively sending the coins
+```
+assetClient tx send $ACCOUNT_1 $ACCOUNT_3 100stake -y $KEYRING $MODE
+assetClient tx send $ACCOUNT_3 $ACCOUNT_2 50stake -y $KEYRING $MODE
+assetClient tx send $ACCOUNT_2 $ACCOUNT_4 5stake -y $KEYRING $MODE
+assetClient tx send $ACCOUNT_4 $ACCOUNT_2 5stake -y $KEYRING $MODE
+sleep $SLEEP
+```
+
+- Step 8
+```
 
