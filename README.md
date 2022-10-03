@@ -1,4 +1,4 @@
-# Transaction-Documentation :rocket:
+# Module-Documentation :rocket:
 
 Welcome to the Transaction.sh Documentation repo, Here you will find anything and everything about transactions. 
 
